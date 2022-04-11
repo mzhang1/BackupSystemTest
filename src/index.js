@@ -1,4 +1,4 @@
-import "../css/styles.css";
+
 
 //When DOM is ready, Immediately perform AJAX request to fetch movies from DB
 $.when( $.ready ).then(function(){
@@ -15,7 +15,7 @@ $.when( $.ready ).then(function(){
 			"request": "getMovies"
 		},
 		success: (data) => {
-			if(data.status === "ok"){
+			if(data.status === "ok" && Object.keys(data.data).length > 0){
 				/**
 				 * Notice : since I chose to return movie data as an hashtable, array functions won't work as an hashtable in PHP
 				 * As PHP hashtable will be returned as an object in JS
@@ -93,7 +93,7 @@ $.when( $.ready ).then(function(){
 				$("#mainContent").html(renderTable(data.data, data.jobs));
 			}
 			else
-				$("#mainContent").html("<span>Error on Movie database load</span>");
+				$("#mainContent").html("<span>No movie available</span>");
 		},
 		error: () => {
 			$("#mainContent").html("<span>Error on Movie database load</span>");

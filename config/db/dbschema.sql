@@ -12,6 +12,9 @@
 
 	Another thing that would be good is to assign jobs for a contact for faster movie cast edit via an associative table
 	it's name would be contact_jobs
+
+	Also I don't think putting Production Co. and Distribution Co. in the "job" table is the most logical way to implement those "jobs"
+	It would be more accurate to have for instance a "Company" table that will store more accurate information about those.
 */
 
 /*
