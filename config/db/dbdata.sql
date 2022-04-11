@@ -37,6 +37,6 @@ INSERT INTO `contact` (`firstname`, `lastname`, `gender`) VALUES
 
 INSERT INTO `movie` (`title`, `release_date`) VALUES
 	("Your Name", "2016-12-28"),
-	("Bac Nord"),
+	("Bac Nord", "2022-01-01"),
 	("Emily In Paris", "2020-10-20");
 
