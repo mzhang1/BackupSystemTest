@@ -44,11 +44,13 @@ class MovieRequests{
 			}
 
 			//Inserting contacts with their role
-			$result[$movieData['id']]['roles'][$movieData['job_title']][] = array(
-				"contactId" => $movieData['contact_id'],
-				"contactFirstname" => $movieData['contact_firstname'],
-				"contactLastname" => $movieData['contact_lastname']
-			);
+			if(!empty($movieData['job_id'])){
+				$result[$movieData['id']]['roles'][$movieData['job_title']][] = array(
+					"contactId" => $movieData['contact_id'],
+					"contactFirstname" => $movieData['contact_firstname'],
+					"contactLastname" => $movieData['contact_lastname']
+				);
+			}
 		}
 
 		//Fetching job list

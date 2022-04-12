@@ -58,7 +58,7 @@ $.when( $.ready ).then(function(){
 
 							let result = "";
 							for(let i = 0; i < jobs.length; i++){
-								result += "<td>"+ renderContacts(data["roles"][jobs[i]]) +"</td>"
+								result += "<td>"+ (data.roles ? renderContacts(data.roles[jobs[i]]) : "") +"</td>"
 							}
 							return result;
 						};
